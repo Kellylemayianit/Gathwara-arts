@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Gathwara Arts</title>
+  <meta name="description" content="Browse the full portfolio of Gathwara Arts — portraits, landscapes, abstracts, and private commissions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
+  <nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">GATHWARA <span>ARTS</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="gallery.html"  class="nav__link active">Gallery</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+      </ul>
+      <a href="#"
+         class="btn btn-primary nav__cta"
+         data-wa="Hello, I'd like to enquire about commissioning a piece from Gathwara Arts.">
+        Commission
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="index.html"    class="nav__link">Home</a></li>
+      <li><a href="gallery.html"  class="nav__link">Gallery</a></li>
+      <li><a href="services.html" class="nav__link">Services</a></li>
+    </ul>
+  </div>
+
+  <!-- ── PAGE HERO ─────────────────────────────────────── -->
+  <section class="page-hero" aria-labelledby="gallery-title">
+    <div class="container">
+      <p class="section-label" style="justify-content:center">The Collection</p>
+      <h1 class="page-hero__title" id="gallery-title">
+        Works That <em>Speak</em><br>Without Words
+      </h1>
+      <p class="page-hero__sub">
+        Twenty-four original works spanning portraits, landscapes, and
+        abstract explorations — each a singular expression of Kenyan identity.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ───────────────────────────────────────── -->
+  <main>
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="gallery-filters" role="group" aria-label="Filter artworks">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="portrait">Portrait</button>
+        <button class="filter-btn" data-filter="landscape">Landscape</button>
+        <button class="filter-btn" data-filter="abstract">Abstract</button>
+      </div>
+
+      <!-- Masonry Grid — populated by script.js -->
+      <div class="masonry-grid" id="masonryGrid" role="list" aria-label="Artwork gallery"></div>
+
+      <!-- Load More -->
+      <div class="gallery-load-more">
+        <button id="loadMoreBtn" class="btn btn-outline">
+          Load More Works
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── LIGHTBOX ──────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous">&#8592;</button>
+    <img class="lightbox__img" id="lbImg" src="" alt="" />
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next">&#8594;</button>
+    <div class="lightbox__counter" id="lbCount" aria-live="polite"></div>
+  </div>
+
+  <!-- ── CTA ───────────────────────────────────────────── -->
+  <section class="cta-banner" style="margin-top:4rem" aria-label="Commission inquiry">
+    <div class="container">
+      <h2 class="cta-banner__title" style="font-size:clamp(1.8rem,3.5vw,3rem)">
+        Interested in a <em>Private Commission?</em>
+      </h2>
+      <p class="cta-banner__sub">Originals, limited prints, and bespoke commissions — by appointment.</p>
+      <div class="cta-banner__actions">
+        <a href="#"
+           class="btn btn-primary"
+           data-wa-service="commissions">
+          Request a Commission
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo">GATHWARA <span>ARTS</span></a>
+          <p style="margin-top:1rem">
+            Fine art studio based in Nairobi, Kenya.
+          </p>
+        </div>
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Services</p>
+          <ul class="footer__links">
+            <li><a href="services.html">Real-Time Rendering</a></li>
+            <li><a href="services.html">Private Commissions</a></li>
+            <li><a href="services.html">Master Mentorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <ul class="footer__links">
+            <li>
+              <a href="#" data-wa="Hello, I'd like to connect with Gathwara Arts.">
+                +254 714 817 516
+              </a>
+            </li>
+            <li><span style="color:#444">Nairobi, Kenya</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2025 Gathwara Arts. All rights reserved.</span>
+        <span>Nairobi, Kenya.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
